@@ -4,6 +4,7 @@ import com.google.inject.AbstractModule;
 import org.guice.start.biz.UserService;
 import org.guice.start.biz.internal.UserServiceImpl;
 import org.guice.start.data.UserDao;
+import org.guice.start.data.internal.SubUserDaoImpl;
 import org.guice.start.data.internal.UserDaoImpl;
 
 /**
@@ -17,5 +18,6 @@ public class ServiceModule extends AbstractModule {
     protected void configure() {
         bind(UserDao.class).to(UserDaoImpl.class);
         bind(UserService.class).to(UserServiceImpl.class);
+        bind(UserDaoImpl.class).to(SubUserDaoImpl.class);
     }
 }
