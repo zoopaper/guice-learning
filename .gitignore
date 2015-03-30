@@ -1,0 +1,15 @@
+build/
+bin-debug/
+bin-release-temp/
+bin/
+*.pbxuser
+*.mode1v3
+test-reports/*
+.DS_Store
+xcuserdata/
+DerivedData/
+*.iml
+*.ipr
+*.iws
+.idea
+target
