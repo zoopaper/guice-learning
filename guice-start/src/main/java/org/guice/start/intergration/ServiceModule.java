@@ -16,8 +16,8 @@ import org.guice.start.data.internal.UserDaoImpl;
 public class ServiceModule extends AbstractModule {
     @Override
     protected void configure() {
-        bind(UserDao.class).to(UserDaoImpl.class);
-        bind(UserService.class).to(UserServiceImpl.class);
-        bind(UserDaoImpl.class).to(SubUserDaoImpl.class);
+        bind(UserDao.class).to(UserDaoImpl.class).asEagerSingleton();
+        bind(UserService.class).to(UserServiceImpl.class).asEagerSingleton();
+        bind(UserDaoImpl.class).to(SubUserDaoImpl.class).asEagerSingleton();
     }
 }

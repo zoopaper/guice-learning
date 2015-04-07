@@ -9,7 +9,7 @@ import org.guice.start.biz.Sort;
  * Time: 下午10:19
  */
 public class QuickSortImpl implements Sort {
-    @Override
+
     public void sort() {
         System.out.println("quick sort............");
     }
