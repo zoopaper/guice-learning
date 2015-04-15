@@ -8,7 +8,6 @@ import org.guice.start.biz.Sort;
  * Time: 下午10:17
  */
 public class BubbleSortImpl implements Sort {
-    @Override
     public void sort() {
         System.out.println("Bubble sort...............");
     }

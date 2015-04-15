@@ -7,7 +7,6 @@ import org.guice.start.biz.Sort;
  * Time: 下午10:50
  */
 public class HalfSort implements Sort{
-    @Override
     public void sort() {
         System.out.println("half sort............");
     }
