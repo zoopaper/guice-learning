@@ -1,8 +1,10 @@
-package org.guice.usage;
+package org.guice.usage.guice;
 
 import com.google.inject.AbstractModule;
-import com.google.inject.Provider;
 import com.google.inject.name.Names;
+import org.guice.usage.ConstantKey;
+import org.guice.usage.service.IService;
+import org.guice.usage.service.internal.ServiceA;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -21,7 +23,7 @@ public class Module1 extends AbstractModule {
         bind(Map.class).annotatedWith(Names.named(ConstantKey.USER_KEY)).to(HashMap.class);
 
         //接口注入
-        bind(Service.class).to(ServiceA.class).asEagerSingleton();
+        bind(IService.class).to(ServiceA.class).asEagerSingleton();
 
 
         bind(String.class).toInstance("krisjin");
@@ -29,11 +31,14 @@ public class Module1 extends AbstractModule {
         //禁止绑定自己
         //bind(HashMap.class).to(HashMap.class);
 
-        bind(Service.class).toProvider(new Provider<Service>() {
-            public Service get() {
-                return null;
-            }
-        });
+
+
+
+//        bind(Service.class).toProvider(new Provider<Service>() {
+//            public Service get() {
+//                return null;
+//            }
+//        });
 
     }
 

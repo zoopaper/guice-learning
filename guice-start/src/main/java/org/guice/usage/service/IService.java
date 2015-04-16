@@ -1,4 +1,4 @@
-package org.guice.usage;
+package org.guice.usage.service;
 
 /**
  * <p/>
@@ -6,7 +6,7 @@ package org.guice.usage;
  * Date: 2015/4/15
  * Time: 17:23
  */
-public interface Service {
+public interface IService {
 
     public void list();
 
